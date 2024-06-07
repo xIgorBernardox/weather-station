@@ -1,0 +1,154 @@
+:root {
+  color-scheme: light dark;
+
+  --title: Kode Mono, sans-serif, Arial, Helvetica;
+  --font-variation: Anta, sans-serif, Arial, Helvetica;
+  --primary-font: Poppins, sans-serif, Arial, Helvetica;
+  --secondary-font: Roboto, sans-serif, Arial, Helvetica;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  overflow: hidden;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.bg {
+  position: absolute;
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding: 16px;
+  margin: 16px;
+
+  position: relative;
+  width: 500px;
+  height: 400px;
+
+  background: rgba(255, 255, 255, 0.14);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(1.2px);
+  -webkit-backdrop-filter: blur(1.2px);
+  border: 1px solid rgba(255, 255, 255, 0.24);
+}
+
+.title {
+  font-family: var(--primary-font);
+  letter-spacing: 2px;
+  text-shadow: #fc0 1px 0 10px;
+}
+
+.dados-sensor,
+.sub-title,
+.dados {
+  font-family: var(--primary-font);
+  letter-spacing: 2px;
+  text-shadow: rgb(0, 0, 0) 1px 0 10px;
+  list-style: none;
+}
+
+.dados-sensor-container {
+  margin: 0 0 16px 0;
+  display: flex;
+  align-items: center;
+}
+
+.icons {
+  height: 46px;
+  width: 46px;
+  margin: 0 16px 0 0;
+}
+
+.icon-fahrenheit {
+  filter: drop-shadow(1px 1px 3px rgb(255, 166, 0));
+}
+
+.icon-celsius {
+  filter: drop-shadow(1px 1px 3px rgb(255, 0, 0));
+}
+
+.icon-humidity {
+  filter: drop-shadow(1px 1px 3px rgb(0, 191, 255));
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 576px) {
+  .bg {
+    height: 100vh;
+    width: 100vw;
+    object-fit: cover;
+  }
+
+  .container {
+    width: 400px;
+    height: 300px;
+  }
+
+  .title {
+    font-size: 24px;
+  }
+
+  .dados-sensor,
+  #dados {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 412px) {
+  .bg {
+    height: 100vh;
+    width: 100vw;
+    object-fit: cover;
+  }
+
+  .container {
+    width: 350px;
+    height: 250px;
+  }
+
+  .title {
+    font-size: 18px;
+  }
+
+  .icons {
+    margin: 0 6px 0 0;
+  }
+}
+
+@media (max-width: 344px) {
+  .bg {
+    height: 100vh;
+    width: 100vw;
+    object-fit: cover;
+  }
+
+  .container {
+    width: 320px;
+    height: 380px;
+  }
+
+  .sub-title {
+    margin: 12px 0 12px 0;
+  }
+}
